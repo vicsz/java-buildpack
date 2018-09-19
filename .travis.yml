@@ -6,7 +6,8 @@ script:
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file: "build/java-buildpack-offline-*.zip"
+  file_glob: true
+  file: build/directory/java-buildpack-*.zip
   skip_cleanup: true
   on:
     tags: true
