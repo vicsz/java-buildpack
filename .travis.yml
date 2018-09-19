@@ -8,4 +8,5 @@ deploy:
   api_key: $GITHUB_TOKEN
   file: build/java-buildpack-offline-*.zip
   skip_cleanup: true
-  tags: true
+  on:
+    tags: true
