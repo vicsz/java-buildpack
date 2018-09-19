@@ -3,3 +3,8 @@ rvm:
   - 2.2
 script:
   - bundle exec rake clean package OFFLINE=true PINNED=true
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: build/java-buildpack-offline-*.zip
+  skip_cleanup: true
