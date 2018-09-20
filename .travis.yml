@@ -3,7 +3,6 @@ rvm:
   - 2.2
 script:
   - bundle exec rake clean package OFFLINE=true PINNED=true VERSION=$TRAVIS_TAG
-  - bundle exec rake package VERSION=$TRAVIS_TAG
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
